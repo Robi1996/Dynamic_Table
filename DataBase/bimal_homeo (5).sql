@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2024 at 05:13 AM
+-- Generation Time: Apr 26, 2024 at 05:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -33,20 +33,6 @@ CREATE TABLE `sellr` (
   `s_Mob` varchar(10) DEFAULT NULL,
   `s_Email` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `sellr`
---
-
-INSERT INTO `sellr` (`id`, `s_Name`, `s_Mob`, `s_Email`) VALUES
-(1, 'Manik Da', '1234569852', 'robiulislam5024@gmail.com'),
-(50, 'Robi', '8617769772', 'robi@gmail.com'),
-(51, 'sajan', '8617769772', 'sajan@gmail.com'),
-(57, 'akram', '8617769772', 'robiulislam5024@gmail.com'),
-(58, 'selim', '8617769772', 'selim@gmail.com'),
-(59, 'rehan', '8617769772', 'rehan@gmail.com'),
-(60, 'ishan', '861776972', 'ishan@gmail.com'),
-(62, 'Robiul islam', '8617769772', 'robiulislam5024@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -92,7 +78,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `sellr`
 --
 ALTER TABLE `sellr`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`

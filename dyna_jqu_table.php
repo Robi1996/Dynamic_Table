@@ -121,23 +121,23 @@ if (isset($_POST['save'])) {
                 }
             });
 
-            // $(document).on('change', '.name', function () {
-            //     var name = $(this).val();
-            //     var $row = $(this).closest("tr"); // Particular selected row 
-            //     $.ajax({
-            //         url: "check_name.php", // Path to the PHP file that handles the AJAX request
-            //         method: "POST",
-            //         data: { name: name }, // Send the name to the server
-            //         success: function (response) {
-            //             // Handle the response from the server
-            //             if (response === "exists") {
-            //                 alert("Name already exists!")
+            $(document).on('change', '.name', function () {
+                var name = $(this).val();
+                var $row = $(this).closest("tr"); // Particular selected row 
+                $.ajax({
+                    url: "check_name.php", // Path to the PHP file that handles the AJAX request
+                    method: "POST",
+                    data: { name: name }, // Send the name to the server
+                    success: function (response) {
+                        // Handle the response from the server
+                        if (response === "exists") {
+                            alert("Name already exists!")
 
-            //                 $row.find(".name").val("");
-            //             }
-            //         }
-            //     });
-            // });
+                            $row.find(".name").val("");
+                        }
+                    }
+                });
+            });
         });
         function addRow() {
             var newRow = '<tr><td style="text-align: center;"><input type="text" name="name[]" id="name" class="name" autofocus></td><td style="text-align: center;"><input type="text" id="contact" name="contact[]"></td><td style="text-align: center;"><input type="email" name="email[]" class="emailInput" id="emailInput" required></td></tr>';
